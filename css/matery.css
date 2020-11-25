@@ -71,9 +71,6 @@
 }
 
 @media all and (orientation:landscape) {
-    #artDetail {
-        margin-top: -40px !important;
-    }
     .brand .post-title {
         font-size: 2rem !important;
         text-overflow: ellipsis;
@@ -108,11 +105,7 @@ h2 {
 }
 
 #articleContent h2 {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 0;
-    margin-top: 2px;
+    padding-bottom: 20px;
     border-bottom: 2px solid #dcdcdc;
 }
 
@@ -822,6 +815,17 @@ header .go-back i {
     font-size: 1.1rem;
 }
 
+#custom-dream-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+#custom-dream-author {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
 .music-player,
 .video-player {
     margin-top: 10px;
@@ -831,6 +835,10 @@ header .go-back i {
 .music,
 .dplayer-video {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 10px 20px -12px rgba(0, 0, 0, .5) !important;
+}
+
+#aplayer {
+    width: 100%;
 }
 
 #recommend-sections {

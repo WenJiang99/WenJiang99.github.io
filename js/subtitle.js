@@ -1,15 +1,13 @@
-const getSubTitle = function (path,sub2,startDelay,typeSpeed,loop,backSpeed,showCursor) {
+const getSubTitle = function (sub2, startDelay, typeSpeed, loop, backSpeed, showCursor) {
     $.ajax({
-        url: path,
-        success: function (data) {
-            const sub1s = data;
-            const sub1 = sub1s[Math.round(Math.random() * sub1s.length) % sub1s.length]
+        url: 'http://www.wenjiang.info:7001/subtitle',
+        success: function (res) {
             var typed = new Typed("#subtitle", {
-                strings: [sub1, sub2],
+                strings: [res && res.data && res.data.text, sub2],
                 startDelay: startDelay,
-                typeSpeed:typeSpeed,
+                typeSpeed: typeSpeed,
                 backSpeed: backSpeed,
-                loop:loop,
+                loop: loop,
                 showCursor: showCursor
             });
         }
