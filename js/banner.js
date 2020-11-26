@@ -7,4 +7,4 @@
 //   })
 // )
 
-$('.bg-cover').css('background-image', `url("http://img.wenjiang.info/284e509e170c.png")`);
+$('.bg-cover').css('background-image', `url("http://img.wenjiang.info/ChMlWl6EBneIHjD_AAZ7OYCu-9sAAN_OgEpJdIABntR299.jpg")`);
