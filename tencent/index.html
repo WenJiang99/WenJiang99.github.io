@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Leetcode 反转字符串中的单词, wenjiang Wenjiang 99 廖文江 博客 文江">
-    <meta name="description" content="反转字符串中的单词顺序">
+    <meta name="keywords" content="tencent, wenjiang Wenjiang 99 廖文江 博客 文江">
+    <meta name="description" content="腾讯一面 70min 2020.08.17自我介绍
+HTTP、HTTPS
+HTTPS握手
+// 还有很多很多问题，主要都是通过简历上的项目来问，然后扩展
+一面 60min 2020.08.21自我介绍
+行内元素和块级元素的区别、有哪些常见的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Leetcode 反转字符串中的单词 | WenJiang</title>
+    <title>tencent | WenJiang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Leetcode 反转字符串中的单词</h1>
+                    <h1 class="description center-align post-title">tencent</h1>
                 </div>
                 <div class="daily-sentence center-align">
                     <span id="jinrishici-sentence">正在加载今日诗词....</span>
@@ -427,17 +432,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/string/">
-                                <span class="chip bg-color">string</span>
-                            </a>
-                        
-                            <a href="/tags/medium/">
-                                <span class="chip bg-color">medium</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -449,28 +446,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-15
+                    2020-11-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-15
+                    2020-11-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 				
@@ -486,20 +483,77 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://leetcode-cn.com/problems/reverse-words-in-a-string/submissions/" target="_blank" rel="noopener">Leetcode-题目链接</a><br><a href="https://github.com/WenJiang99/leetcode/tree/master/String/reverseWords" target="_blank" rel="noopener">github-链接</a></p>
-<p><img src="./problem.png" alt=""><br><img src="https://raw.githubusercontent.com/WenJiang99/leetcode/master/String/reverseWords/problem.png" alt=""></p>
-<h2 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这个题目也不是很难，起码思路还是很容易就可以想到了的。</p>
-<p>题目要求只是把字符串中的单词的顺序反转过来，而不需要把单词中的每一个字母也反转，所以只需要先把字符串的每一个单词都拆分出来得到一个数组，然后调用数组的 <code>reverse</code>方法把数组反转一下，然后在重新变成一个字符串就OK了</p>
-<p>这里需要注意的一个坑是，原来的字符串中一个单词可能有很多个空格字符分隔，但是反转后的单词都只能用一个空格分隔，所以需要做一下处理。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {string}
- */</span>
-<span class="token keyword">var</span> reverseWords <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">!</span><span class="token operator">!</span>item<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>s.trim()</code> 用来先对字符串首尾的空格做一下处理，然后调用 <code>split</code>方法用空格作为分隔符把字符串拆开得到一个单词数组， <code>reverse</code> 方法用来反转数组， <code>filter</code>方法用来把数组里的空字符去掉</p>
-<h3 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h3><p>耗时：60ms 92.22$<br>内存： 34.6MB 100%</p>
+                <h1 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h1><h2 id="一面-70min-2020-08-17"><a href="#一面-70min-2020-08-17" class="headerlink" title="一面 70min 2020.08.17"></a>一面 70min 2020.08.17</h2><p>自我介绍</p>
+<p>HTTP、HTTPS</p>
+<p>HTTPS握手</p>
+<p>// 还有很多很多问题，主要都是通过简历上的项目来问，然后扩展</p>
+<h2 id="一面-60min-2020-08-21"><a href="#一面-60min-2020-08-21" class="headerlink" title="一面 60min 2020.08.21"></a>一面 60min 2020.08.21</h2><p>自我介绍</p>
+<p>行内元素和块级元素的区别、有哪些常见的块级元素和行内元素</p>
+<p>布局方法，垂直布局的实现（flex布局，非flex布局）</p>
+<p>flex布局的一些属性（<code>flex-direction</code>,<code>justify-content</code>,<code>align-items</code>）</p>
+<p>flex容器的子元素设置<code>flex-grow</code>的表现</p>
+<p><code>flex:1</code>是什么意思</p>
+<p>CSS常见选择器</p>
+<p>选择器优先级</p>
+<p>HTML里面引用CSS文件的方法</p>
+<p>CSS文件通常怎么放置，怎么组织</p>
+<p>浏览器渲染过程</p>
+<p>为什么加载放在head标签内，脚本文件加载放在body标签后面</p>
+<p>如果浏览器要渲染一个很大很大的页面文件，会怎么渲染（是一边解析一边渲染，还是解析完再渲染）</p>
+<p>首屏渲染指的是什么</p>
+<p>首屏渲染时间</p>
+<p>怎么加快首屏渲染</p>
+<p>浏览器兼容问题有了解过吗</p>
+<p>讲一下JavaScript数组的常用方法</p>
+<p>数组的reduce方法怎么用</p>
+<p>函数防抖和节流有了解吗？讲一下</p>
+<p>ES6 变量定义和ES5变量定义区别</p>
+<p>function定义函数和箭头函数的区别</p>
+<p>ES6还了解什么（Promise，async/await , 展开运算符，generator，…）</p>
+<p>说一下EventLoop模型</p>
+<p>讲一下<code>this</code>指向的问题</p>
+<p>JavaScript对象继承方法（常见的6种）</p>
+<p>讲一下原型链（原型对象和实例）</p>
+<p>浏览器安全有了解过吗？讲一下常见的安全问题和防范方法（CSRF、XSS）</p>
+<p>React框架里面怎么防范XSS</p>
+<p>react里面要怎么不转译字符，直接插入一段HTML代码（__dangerousInnerHtml属性）</p>
+<p>跨域了解吗？讲一下跨域产生的原因和解决方法(jsonp,服务端设置响应头，nginx方向代理…)</p>
+<p>仔细讲一下jsonp的原理（这里回答得不是很好…）</p>
+<p>GET和POST方法的区别</p>
+<p>HTTP缓存讲一下</p>
+<p>给定一个字符串，找出出现次数最多的字符和出现的次数</p>
+<p>复杂度是多少</p>
+<p>反问环节</p>
+<h2 id="二面-38min-2020-08-25"><a href="#二面-38min-2020-08-25" class="headerlink" title="二面 38min 2020.08.25"></a>二面 38min 2020.08.25</h2><p>自我介绍</p>
+<p>前端学习方法</p>
+<p>webpack打包原理</p>
+<p>项目重新构建后，怎么控制引用的文件的版本，怎么保证用户访问到的是新的版本的文件</p>
+<p>异常处理，全局的异常捕获处理（node端、浏览器端）</p>
+<p>路由原理，怎么实现跳转、页面是否会刷新</p>
+<p>new 操作符的原理</p>
+<p>原型继承怎么实现</p>
+<p>原型继承有什么缺点？怎么解决</p>
+<p>同源策略是什么</p>
+<p>不同源的时候有什么限制</p>
+<p>跨域怎么解决</p>
+<p>服务端设置响应头实现跨域的原理是什么</p>
+<p>websocket连接过程</p>
+<p>https握手过程</p>
+<p>为什么握手过程要这样设计</p>
+<p>这种方式会存在中间人攻击的情况吗</p>
+<p>Node了解吗</p>
+<p>koa框架有什么特点</p>
+<p>koa中间件原理</p>
+<p>如果很多的一组整数，怎么取出最大的三个，复杂度是多少</p>
+<p>JS大数相加（如果是负数呢…）</p>
+<p>反问环节</p>
+<p>总的来说，面试官重要是从一个点开始，逐渐往深入去问，然后问的问题，对我来说的话，都稍微属于比较难一点的问题，</p>
+<p>知识点涉及得比较泛，而且很多都是偏向于问原理和比较深入的理解，明明是前端开发岗位，但是还是问了很多其他方面的知识</p>
+<p>自己很多很多的问题回答得很不好，确实是在很多知识方面都没有理解透，很多原理方面的问题都没有去了解过，也还有很多问题虽然有了解过，但是了解得比较浅，不扎实</p>
+<p>然后算法方面也真的特别差!!!</p>
+<p>后面的时间，一定要把算法好好补一下，然后项目整体开发流程过程中用到的技术，webpack,nginx,docker 好好整理一下相关的知识点</p>
+<p>然后计算机网络方面，还得好好看书</p>
+<p>最后的话，一定要去研究一下很多知识的底层实现了！！！</p>
 
             </div>
             <hr/>
@@ -525,7 +579,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.wenjiang.info/leetcode/string/reversewords/readme/">http://blog.wenjiang.info/leetcode/string/reversewords/readme/</a>
+                    <a href="http://blog.wenjiang.info/tencent/">http://blog.wenjiang.info/tencent/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -562,15 +616,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/string/">
-                                    <span class="chip bg-color">string</span>
-                                </a>
-                            
-                                <a href="/tags/medium/">
-                                    <span class="chip bg-color">medium</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1001,24 +1047,33 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leetcode/string/addbinary/readme/">
+                <a href="/bytedance/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Leetcode 二进制求和">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="bytedance">
                         
-                        <span class="card-title">Leetcode 二进制求和</span>
+                        <span class="card-title">bytedance</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定二进制字符串求出其和
+                            一面 40min自我介绍
+JS用得多还是TS用得多
+TS和JS有什么区别
+ES6用得多吗
+CSS水平垂直居中怎么实现（通过flex布局实现）
+flex布局的哪些属性
+了解哪些状态码
+常见的请求方法
+写题目：
+第一个是关于闭包方面的题目吧，调
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                         </span>
                         <span class="publish-author">
                             
@@ -1027,18 +1082,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/easy/">
-                        <span class="chip bg-color">easy</span>
-                    </a>
-                    
-                    <a href="/tags/string/">
-                        <span class="chip bg-color">string</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1050,29 +1093,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leetcode/string/lengthoflastword/readme/">
+                <a href="/leetcode-linkedlist/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Leetcode 最后一个单词的长度">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="leetcode-链表题目合集">
                         
-                        <span class="card-title">Leetcode 最后一个单词的长度</span>
+                        <span class="card-title">leetcode-链表题目合集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            找出给定字符串中的最后一个单词的长度
+                            leetcode链表相关的常见题目
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-16
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            wenjiang
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1080,12 +1127,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/easy/">
-                        <span class="chip bg-color">easy</span>
-                    </a>
-                    
-                    <a href="/tags/string/">
-                        <span class="chip bg-color">string</span>
+                    <a href="/tags/LinkedList/">
+                        <span class="chip bg-color">LinkedList</span>
                     </a>
                     
                 </div>
@@ -1272,7 +1315,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.7k</span>&nbsp;字
+                class="white-color">17.3k</span>&nbsp;字
             
             
             

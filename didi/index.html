@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Leetcode#String 有效括号, wenjiang Wenjiang 99 廖文江 博客 文江">
-    <meta name="description" content="给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串，判断字符串是否有效。">
+    <meta name="keywords" content="DiDi, wenjiang Wenjiang 99 廖文江 博客 文江">
+    <meta name="description" content="滴滴面试一面 40minJS和TS的区别、联系
+面向对象与面向过程语言的区别
+介绍一下面向对象编程（三个核心）
+AOP了解过吗
+自我介绍（真的是到这里才想起让我自我介绍的!!!）
+git操作熟练吗
+创建一个Git仓库的命令是什么
+git m">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Leetcode#String 有效括号 | WenJiang</title>
+    <title>DiDi | WenJiang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Leetcode#String 有效括号</h1>
+                    <h1 class="description center-align post-title">DiDi</h1>
                 </div>
                 <div class="daily-sentence center-align">
                     <span id="jinrishici-sentence">正在加载今日诗词....</span>
@@ -427,17 +434,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/easy/">
-                                <span class="chip bg-color">easy</span>
-                            </a>
-                        
-                            <a href="/tags/string/">
-                                <span class="chip bg-color">string</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -449,28 +448,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-11-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-11-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    202
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 				
@@ -486,50 +485,70 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://leetcode-cn.com/problems/valid-parentheses/" target="_blank" rel="noopener">LeetCode-题目链接</a><br><a href="https://github.com/WenJiang99/leetcode/tree/master/String/validBracket" target="_blank" rel="noopener">Github-链接</a></p>
-<p><img src="./problem.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/WenJiang99/leetcode/master/String/validBracket/problem.png" alt=""></p>
-<h2 id="解法1-数组模拟堆栈-64ms-33-7MB"><a href="#解法1-数组模拟堆栈-64ms-33-7MB" class="headerlink" title="解法1 数组模拟堆栈 64ms 33.7MB"></a>解法1 数组模拟堆栈 64ms 33.7MB</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> isValid <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">switch</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">case</span> <span class="token string">')'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">'('</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">;</span>
-            <span class="token keyword">case</span> <span class="token string">']'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">'['</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">case</span> <span class="token string">'}'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">'{'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">;</span>
-            <span class="token keyword">default</span><span class="token punctuation">:</span> stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> stack<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> isValid <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> bracketMap <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">')'</span><span class="token punctuation">:</span> <span class="token string">'('</span><span class="token punctuation">,</span> <span class="token string">']'</span><span class="token punctuation">:</span> <span class="token string">'['</span><span class="token punctuation">,</span> <span class="token string">'}'</span><span class="token punctuation">:</span> <span class="token string">'{'</span> <span class="token punctuation">}</span>
-    <span class="token keyword">const</span> stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">in</span> bracketMap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!==</span> bracketMap<span class="token punctuation">[</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> stack<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>解法2的思路其实和解法1几乎完全一致，就是用一个<code>Object</code>来代替了 <code>switch case</code> ，解法2的写法比解法1要优雅一些，但是执行效率比解法1要低一些。<br><strong>果然还是鱼和熊掌不可兼得，唯独丑和单身可以啊</strong></p>
+                <h1 id="滴滴面试"><a href="#滴滴面试" class="headerlink" title="滴滴面试"></a>滴滴面试</h1><h2 id="一面-40min"><a href="#一面-40min" class="headerlink" title="一面 40min"></a>一面 40min</h2><p>JS和TS的区别、联系</p>
+<p>面向对象与面向过程语言的区别</p>
+<p>介绍一下面向对象编程（三个核心）</p>
+<p>AOP了解过吗</p>
+<p>自我介绍（真的是到这里才想起让我自我介绍的!!!）</p>
+<p>git操作熟练吗</p>
+<p>创建一个Git仓库的命令是什么</p>
+<p>git merge 和 git rebase 的区别</p>
+<p>有些文件不想通过git管理要怎么办</p>
+<p>写过后端吗</p>
+<p>SQL写得怎么样，有没有写过复杂的查询语句</p>
+<p>有没有看过哪些库的源代码</p>
+<p>写项目时候有没有遇到比较难的问题，介绍一下</p>
+<p>怎么解决问题的</p>
+<p>DOM操作熟吗</p>
+<p>React框架原理</p>
+<p>开发工具（真的是问开发工具IDEA，当时还听错是开发框架）</p>
+<p>ES6熟吗</p>
+<p>写过的大型项目，介绍一下</p>
+<p>栈和队列的区别</p>
+<p>树的遍历方法,三种遍历方式都讲一下</p>
+<p>LRU缓存（采用的是什么数据结构来存储的？双向链表）</p>
+<p>设计模式了解吗？说一下知道的设计模式（单例、发布订阅、工厂、代理、命令…)</p>
+<p>说一下代理模式是怎么样的</p>
+<p>代理模式有什么好处</p>
+<p>项目中用过哪些设计模式</p>
+<p>HTTPS 和 HTTP 的区别</p>
+<p>HTTPS加密算法</p>
+<p>MD5是对称加密还是非对称</p>
+<p>刷题环节：</p>
+<p>1、给定一个数组和一个值，求两数之和等于这个值的下标</p>
+<p>2、反转单向链表</p>
+<p>总体而言，这轮的面试应该是比较典型的技术面吧，先问一些技术问题，考察一些你的技术广度，看看你会不会用某些技术，有没有学过某些知识，然后在后面写两道算法题，看看你的编码能力</p>
+<h2 id="二面-30min"><a href="#二面-30min" class="headerlink" title="二面 30min"></a>二面 30min</h2><p>自我介绍</p>
+<p>说一下你的技术栈</p>
+<p>React框架的原理</p>
+<p>虚拟DOM有什么好处？解决了什么问题</p>
+<p>如果没有了虚拟DOM，React还能正常运行吗？为什么？</p>
+<p>React为什么要使用JSX模板？</p>
+<p>Redux原理</p>
+<p>为什么Redux要这样设计？</p>
+<p>Redux有什么优势？</p>
+<p>使用一个发布订阅模式来替代Redux可以吗？（可以）</p>
+<p>那为什么还要弄一个redux？</p>
+<p>react-redux的原理是什么？</p>
+<p>JavaScript和Typescript的区别</p>
+<p>TS相对JS有什么优势？（类型推导）</p>
+<p>除了类型推导还有什么？</p>
+<p>webpack的原理</p>
+<p>怎么从入口文件找到所有的文件依赖</p>
+<p>loader和plugin的区别</p>
+<p>NodeJS后端有什么特点？使用于什么场景？</p>
+<p>Node后端开发与Java等其他语言开发有什么优势、劣势？</p>
+<p>（面试官可能觉得我已经扛不住了，决定问我一些开放性的问题了…）</p>
+<p>三年的职业规划？</p>
+<p>怎么看待公司业务的开发和个人技术的发展</p>
+<p>有什么想问我的吗？</p>
+<p>我感觉这一轮的面试有点点像是压力面…全程下来面试官也没有问很多的问题，都是从一个问题出发，然后不断的问哪里哪里怎么样，为什么、哪里哪里又为什么，为什么要这样，为什么会这样….</p>
+<p>整个面试下来，好多地方被面试官问得无话可说，真真确确的感受到了被支配的恐惧！！！</p>
+<p>当然面试官人其实也还是很好的，回答不上来的时候也有换一些角度去引导我思考，无话可说的时候也没有继续为难，后面还问了一些比较开放一些的问题让我放松了一点（真的太难了…）</p>
+<p>总体而言，我觉得这轮的面试，面试官不仅仅是在考察你会不会用某些技术，更主要是在看你对某些技术是否了解深入透彻，是否知道为什么会有人要弄出这么一个技术，它究竟是要解决什么问题</p>
+<h2 id="三面-30min"><a href="#三面-30min" class="headerlink" title="三面 30min"></a>三面 30min</h2><p>最后一轮的技术面遇到的面试官真的是超级超级和蔼的一个面试官，全程都是在聊天式的技术交流</p>
+<p>主要问的问题也是一些开放性的问题，问你遇到的一些技术难题，怎么解决的，还有怎么去学习新的技术的</p>
+<p>感觉这一轮的面试，面试官更多的又是在考察你的学习能力，实际解决问题的能力，还有很多其他方面的综合能力，看你是否有比较好的思考逻辑（也许是因为一下午面了好几个小时了，面试官也不忍心再问太难的问题了吧…）</p>
 
             </div>
             <hr/>
@@ -555,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.wenjiang.info/leetcode/string/validbracket/readme/">http://blog.wenjiang.info/leetcode/string/validbracket/readme/</a>
+                    <a href="http://blog.wenjiang.info/didi/">http://blog.wenjiang.info/didi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -592,15 +611,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/easy/">
-                                    <span class="chip bg-color">easy</span>
-                                </a>
-                            
-                                <a href="/tags/string/">
-                                    <span class="chip bg-color">string</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1031,24 +1042,29 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leetcode/string/strstr/readme/">
+                <a href="/meituan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Leetcode#String 在字符串中查找字串">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="meituan">
                         
-                        <span class="card-title">Leetcode#String 在字符串中查找字串</span>
+                        <span class="card-title">meituan</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在字符串中查找字串开始的索引
+                            美团一面 1h25min 2020.08.24自我介绍
+问简历上的一个微信小程序
+docker（简历上的一个项目有用到），大概问了5，6分钟
+项目的打包、部署方面的一些问题（webpack）
+（项目相关大概问了有20min左右吧）
+讲一下r
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                         </span>
                         <span class="publish-author">
                             
@@ -1057,18 +1073,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/easy/">
-                        <span class="chip bg-color">easy</span>
-                    </a>
-                    
-                    <a href="/tags/string/">
-                        <span class="chip bg-color">string</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1080,24 +1084,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leetcode/string/longestcommonprefix/readme/">
+                <a href="/bytedance/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Leetcode 最长公前缀">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="bytedance">
                         
-                        <span class="card-title">Leetcode 最长公前缀</span>
+                        <span class="card-title">bytedance</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Leetcode#编写一个函数查找字符串数组中的最长的公共前缀
+                            一面 40min自我介绍
+JS用得多还是TS用得多
+TS和JS有什么区别
+ES6用得多吗
+CSS水平垂直居中怎么实现（通过flex布局实现）
+flex布局的哪些属性
+了解哪些状态码
+常见的请求方法
+写题目：
+第一个是关于闭包方面的题目吧，调
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                             </span>
                         <span class="publish-author">
                             
@@ -1106,18 +1119,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/easy/">
-                        <span class="chip bg-color">easy</span>
-                    </a>
-                    
-                    <a href="/tags/string/">
-                        <span class="chip bg-color">string</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1302,7 +1303,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.7k</span>&nbsp;字
+                class="white-color">17.3k</span>&nbsp;字
             
             
             

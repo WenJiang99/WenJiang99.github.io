@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="无重复字符的最长字串">
-    <meta name="description" content="找出给定字符串中不含有重复字符的 最长子串 的长度">
+    <meta name="keywords" content="meituan, wenjiang Wenjiang 99 廖文江 博客 文江">
+    <meta name="description" content="美团一面 1h25min 2020.08.24自我介绍
+问简历上的一个微信小程序
+docker（简历上的一个项目有用到），大概问了5，6分钟
+项目的打包、部署方面的一些问题（webpack）
+（项目相关大概问了有20min左右吧）
+讲一下r">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Leetcode 无重复字符的最长字串 | WenJiang</title>
+    <title>meituan | WenJiang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Leetcode 无重复字符的最长字串</h1>
+                    <h1 class="description center-align post-title">meituan</h1>
                 </div>
                 <div class="daily-sentence center-align">
                     <span id="jinrishici-sentence">正在加载今日诗词....</span>
@@ -427,17 +432,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/easy/">
-                                <span class="chip bg-color">easy</span>
-                            </a>
-                        
-                            <a href="/tags/string/">
-                                <span class="chip bg-color">string</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -449,28 +446,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-21
+                    2020-11-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-21
+                    2020-11-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    504
+                    874
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 				
@@ -486,66 +483,112 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Leetcode-题目链接</a>   </p>
-<p><a href="https://github.com/WenJiang99/leetcode/tree/master/String/longestSubstring" target="_blank" rel="noopener">github-链接</a></p>
-<p><img src="./problem.png" alt="">   </p>
-<!-- select a type of hexo pic ref -->
-<!-- ![](https://raw.githubusercontent.com/WenJiang99/leetcode/master/String/longestSubstring/problem.png)    -->
-<p><img src="./readme/problem.png" alt=""></p>
-<h2 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>题目要的是 <strong>无重复</strong>字符的<strong>最长</strong>的字串，因此需要两个变量<code>currentStr</code>和<code>len</code>分别去存储当前字串和当前的最长的无重复字符的字串长度。</p>
-<p>对字符串进行遍历，如果当前当前字符不在 <code>currentStr</code>中，则存到 <code>currentStr</code>中，如果当前字串<code>currentStr</code>中已经有了这个字符，即当前字符是重复的，</p>
-<p>则此时应该重新计算字串，同时对比已经存储的最长字串的长度 <code>len</code> 和当前字串的长度的大小，取大的值作为 <code>len</code>的值。</p>
-<p>然后当前字串 <code>currentStr</code> 应该从重复的字符开始截断，再拼接上当前字符。</p>
-<p>还有一个小地方就是，<strong>无重复字符的最长字串的长度一定会小于等于字符串的无重复字符个数</strong></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {number}
- */</span>
-<span class="token keyword">var</span> lengthOfLongestSubstring <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>s<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> currentStr <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> chars <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
-    <span class="token keyword">const</span> maxLen <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> chars<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> len <span class="token operator">&lt;</span> maxLen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentStr<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            len <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>len<span class="token punctuation">,</span> currentStr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            currentStr <span class="token operator">=</span> currentStr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>currentStr<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            currentStr <span class="token operator">+</span><span class="token operator">=</span> chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        i<span class="token operator">++</span><span class="token punctuation">;</span>
+                <h1 id="美团"><a href="#美团" class="headerlink" title="美团"></a>美团</h1><h2 id="一面-1h25min-2020-08-24"><a href="#一面-1h25min-2020-08-24" class="headerlink" title="一面 1h25min 2020.08.24"></a>一面 1h25min 2020.08.24</h2><p>自我介绍</p>
+<p>问简历上的一个微信小程序</p>
+<p>docker（简历上的一个项目有用到），大概问了5，6分钟</p>
+<p>项目的打包、部署方面的一些问题（webpack）</p>
+<p>（项目相关大概问了有20min左右吧）</p>
+<p>讲一下react的生命周期</p>
+<p>平时学习会看哪些文档</p>
+<p>JS方面会看什么文档</p>
+<p>js里面怎么遍历一个文件夹下的所有js后缀文件</p>
+<p>node里面怎么获取到环境变量</p>
+<p>讲一下EventLoop模型</p>
+<p>看代码问输出(eventloop)</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 start'</span><span class="token punctuation">)</span>
+  <span class="token keyword">await</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 end'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span>
+  <span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>错误上报机制（try/catch）</p>
+<p>全局的错误捕获</p>
+<p>讲一下原型链是什么</p>
+<p>看题目问问题</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+A<span class="token punctuation">.</span>prototype
+a<span class="token punctuation">.</span>prototype
+
+A<span class="token punctuation">.</span>__proto__
+a<span class="token punctuation">.</span>__proto__<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>new操作符创建实例的时候会做些什么</p>
+<p>执行上下文(this)</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">124</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">A</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">A</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span> <span class="token number">45</span><span class="token punctuation">,</span>
+    getA<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>len<span class="token punctuation">,</span> currentStr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>应该要注意的地方是在当前字符存在于当前字串时候，对当前字串的切分应该是从 <code>indexOf(chars[i]) +1</code>而不是 <code>indexOf(chars[i])</code>，否则重复的字符就不能被切掉</p>
-<pre class="line-numbers language-js"><code class="language-js">currentStr <span class="token operator">=</span> currentStr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>currentStr<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h3><p>耗时：88ms,93.75%<br>内存：37.7MB, 76.71%</p>
-<h2 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>和上面的解法大致相同，只是把字符串转换成数组进行操作</p>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {number}
- */</span>
-<span class="token keyword">var</span> lengthOfLongestSubstring <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>s<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> currentStr <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> chars <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
-    <span class="token keyword">const</span> maxLen <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>chars<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> len <span class="token operator">&lt;</span> maxLen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">const</span> item <span class="token operator">=</span> chars<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentStr<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            len <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>len<span class="token punctuation">,</span> currentStr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            currentStr <span class="token operator">=</span> currentStr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>currentStr<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> item<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> currentStr <span class="token operator">=</span> currentStr <span class="token operator">+</span> item<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>len<span class="token punctuation">,</span> currentStr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="效率-1"><a href="#效率-1" class="headerlink" title="效率"></a>效率</h3><p>耗时：88ms,93.75 %<br>内存：37.7MB,76.71 %</p>
+<span class="token punctuation">}</span>
+obj<span class="token punctuation">.</span><span class="token function">getA</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 45</span>
+<span class="token keyword">var</span> getB <span class="token operator">=</span> obj<span class="token punctuation">.</span>getA
+<span class="token function">getB</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// undefined</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>js数组用过哪些方法</p>
+<p><code>slice</code>方法和<code>splice</code>方法的区别</p>
+<p>String用过哪些方法</p>
+<p>实现一下String的<code>replace</code>方法（！！！听到题目的时候有点懵了）</p>
+<p>最有成就感的一件事是什么</p>
+<p>有几个offer了</p>
+<p>有什么想问的</p>
+<h2 id="二面-1h13min-2020-08-29"><a href="#二面-1h13min-2020-08-29" class="headerlink" title="二面 1h13min 2020.08.29"></a>二面 1h13min 2020.08.29</h2><p>自我介绍</p>
+<p>介绍一下实习期间的项目</p>
+<p>实习期间遇到的最难解决的问题是什么</p>
+<p>介绍一下自己写的一个小程序（面试官直接就打开手机来看了）</p>
+<p>小程序的里面的图像识别调用的接口</p>
+<p>小程序里面哪些问题比较难解决</p>
+<p>介绍一下自己写的一个H5项目</p>
+<p>怎样部署的？</p>
+<p>docker部署的方式（流程）</p>
+<p>写一道题目，数字格式化，添加千分位逗号，采用正则写法和非正则写法</p>
+<p>本科专业学过哪些计算机专业相关的课程</p>
+<p>成绩排名怎么样</p>
+<p>C语言、计算机网络考试分数怎么样</p>
+<p>问了一下我的博客的一些问题</p>
+<p>大四还有哪些课程</p>
+<p>可以来实习吗，什么时候可以来</p>
+<p>秋招情况怎么样了？还有其他面试吗？有拿了什么offer了吗</p>
+<p>家是哪些的？介意来北京工作吗</p>
+<p>反问环节</p>
+<p>总的来说，二面的话主要还是对着简历上的项目来问，问的都是实习相关、项目相关的问题，而且更多是在看我做了些什么东西，也没有很深入的往下问，问的一些问题也比较像HR面的问题</p>
+<h2 id="HR面-18min-2020-09-02"><a href="#HR面-18min-2020-09-02" class="headerlink" title="HR面 18min 2020.09.02"></a>HR面 18min 2020.09.02</h2><p>确认一下应聘的岗位、部门、城市信息等等</p>
+<p>为什么没有打算考研呢</p>
+<p>是怎么样接触到前端开发，然后想要选择前端开发作为自己的职业呢</p>
+<p>在学校的成绩怎么样</p>
+<p>平时是怎么学习前端开发的呢</p>
+<p>现在的面试情况怎么样了，有面试哪些公司</p>
+<p>最想去哪个公司</p>
+<p>为什么想要来应聘美团呢</p>
+<p>对美团了解多吗</p>
+<p>都通过什么途径了解的美团</p>
+<p>如果现在你拿到了美团和xxx的offer，你会怎么选择呢</p>
+<p>有什么规划吗</p>
+<p>反问环节</p>
 
             </div>
             <hr/>
@@ -571,7 +614,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.wenjiang.info/leetcode/string/longestsubstring/readme/">http://blog.wenjiang.info/leetcode/string/longestsubstring/readme/</a>
+                    <a href="http://blog.wenjiang.info/meituan/">http://blog.wenjiang.info/meituan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -608,15 +651,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/easy/">
-                                    <span class="chip bg-color">easy</span>
-                                </a>
-                            
-                                <a href="/tags/string/">
-                                    <span class="chip bg-color">string</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1043,53 +1078,44 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/array-unique/">
+                <a href="/meituan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JavaScript 数组去重">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="meituan">
                         
-                        <span class="card-title">JavaScript 数组去重</span>
+                        <span class="card-title">meituan</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaScript常用的数组去重方法
+                            美团一面 1h25min 2020.08.24自我介绍
+问简历上的一个微信小程序
+docker（简历上的一个项目有用到），大概问了5，6分钟
+项目的打包、部署方面的一些问题（webpack）
+（项目相关大概问了有20min左右吧）
+讲一下r
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Javascript/" class="post-category">
-                                    Javascript
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            wenjiang
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/array/">
-                        <span class="chip bg-color">array</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">常用函数</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1100,24 +1126,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leetcode/string/canconstruct/readme/">
+                <a href="/didi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Leetcode 赎金信">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="DiDi">
                         
-                        <span class="card-title">Leetcode 赎金信</span>
+                        <span class="card-title">DiDi</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            判断一个字符串是否可以由另外一个字符串的字符构成
+                            滴滴面试一面 40minJS和TS的区别、联系
+面向对象与面向过程语言的区别
+介绍一下面向对象编程（三个核心）
+AOP了解过吗
+自我介绍（真的是到这里才想起让我自我介绍的!!!）
+git操作熟练吗
+创建一个Git仓库的命令是什么
+git m
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                             </span>
                         <span class="publish-author">
                             
@@ -1126,18 +1159,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/easy/">
-                        <span class="chip bg-color">easy</span>
-                    </a>
-                    
-                    <a href="/tags/string/">
-                        <span class="chip bg-color">string</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1322,7 +1343,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.7k</span>&nbsp;字
+                class="white-color">17.3k</span>&nbsp;字
             
             
             
